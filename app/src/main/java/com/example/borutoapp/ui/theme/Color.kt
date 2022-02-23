@@ -1,5 +1,6 @@
 package com.example.borutoapp.ui.theme
 
+import android.hardware.lights.Light
 import androidx.compose.material.Colors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
@@ -27,3 +28,17 @@ get() = if(isLight) DarkGray else LightGray
 val Colors.descriptionColor
     @Composable
     get() = if(isLight) DarkGray.copy(alpha = 0.5f) else LightGray.copy(alpha = 0.5f)
+
+
+val Colors.activeIndicatorColor
+@Composable
+get() = if (isLight) Purple500 else Purple700
+
+val Colors.inactiveIndicatorColor
+@Composable
+get() = if (isLight) LightGray else DarkGray
+
+
+val Colors.buttonBackGroundColor
+    @Composable
+    get() = if (isLight) Purple500 else Purple700
